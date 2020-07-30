@@ -16,5 +16,5 @@ else  # someones local
 		esac
 		GITHUB_REPOSITORY=$(git remote get-url origin | awk -F 'github.com/' '{print $2}' | awk -F '.git' '{print $1}')
 		echo "GITHUB REPOSITORY: ${GITHUB_REPOSITORY}"
-		find . -type f \( -iname \*.mod -o -iname \*.go \) -print0 | xargs -0 sed -i "" "s@${GITHUB_REPOSITORY}@${GITHUB_REPOSITORY}@g"
+		find . -type f \( -iname \*.mod -o -iname \*.go \) -print0 | xargs -0 sed -i "" "s@Benbentwo/go-bin-generic@${GITHUB_REPOSITORY}@g"
 fi
