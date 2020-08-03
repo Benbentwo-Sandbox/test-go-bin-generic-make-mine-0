@@ -6,10 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+        with:
+          ref: master
 
       - run: |
           ./make-this-mine.sh && rm ./.github/workflows/on-new-repo.yml
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Make this mine
+          branch: master
