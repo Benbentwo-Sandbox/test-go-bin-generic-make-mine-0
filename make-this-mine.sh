@@ -9,7 +9,8 @@ if [[ "${GITHUB_WORKSPACE}" ]]; then
 		echo "ORG: ${ORG}, REPO: ${REPO}"
 		sed -i "s@ORG			:= Benbentwo@ORG         := ${ORG}@g" Makefile
 		sed -i "s@REPO        := go-bin-generic@REPO        := ${REPO}@g" Makefile
-		sed -i "s@BINARY 		:= go-bin-generic@BINARY      := ${REPO}@g" Makefile
+		sed -i "s@BINARY      := go-bin-generic@BINARY      := ${REPO}@g" Makefile
+
 else  # someones local
 		read -r -p "Do you want to continue? [y/N] " response
 		case "$response" in
@@ -29,5 +30,5 @@ else  # someones local
 		echo "ORG: ${ORG}, REPO: ${REPO}"
 		sed -i "" "s@ORG			:= Benbentwo@ORG			:= ${ORG}@g" Makefile
 		sed -i "" "s@REPO        := go-bin-generic@REPO        := ${REPO}@g" Makefile
-		sed -i "" "s@BINARY 		:= go-bin-genericc@BINARY 		:= ${REPO}@g" Makefile
+		sed -i "" "s@BINARY 		:= go-bin-generic@BINARY 		:= ${REPO}@g" Makefile
 fi
