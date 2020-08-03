@@ -1,5 +1,5 @@
 name: New Repository
-on: [create, push]
+on: create
 
 jobs:
   build:
