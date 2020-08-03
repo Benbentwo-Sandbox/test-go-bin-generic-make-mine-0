@@ -4,7 +4,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository != "Benbentwo/go-bin-generic" && github.repository != "Benbentwo-Sandbox/test-go-bin-generic-make-mine-0"
+    if: github.repository != 'Benbentwo/go-bin-generic' && github.repository != 'Benbentwo-Sandbox/test-go-bin-generic-make-mine-0'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
